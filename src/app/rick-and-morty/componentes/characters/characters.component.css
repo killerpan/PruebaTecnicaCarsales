@@ -1,0 +1,9 @@
+div.characters div.name-search {
+  padding: 15px 0 25px;
+}
+
+div.listchar div.card {
+  size: auto;
+  margin: 0px auto;
+  width: 300px;
+}

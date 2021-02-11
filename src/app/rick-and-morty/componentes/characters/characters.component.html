@@ -1,0 +1,53 @@
+<div class="container characters">
+  <div class="name-search row">
+    <div class="col-md-11">
+      <input
+        name="name-search"
+        id="name-search"
+        placeholder="Buscar por nombre"
+        type="text"
+        class="form-control"
+        autocomplete="off"
+        [(ngModel)]="searchTerm"
+      />
+    </div>
+    <div class="col-md-1">
+      <button type="button" class="btn btn-primary" (click)="getCharacters(1)">
+        Buscar
+      </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="card-columns">
+      <div
+        class="card"
+        *ngFor="let c of characterCall?.results"
+        [routerLink]="['/character', c.id]"
+        [queryParams]="{ fromPage: currentPage, nameSearch: searchTerm }"
+      >
+        <img
+          [src]="c.image"
+          alt="{{ c.name }}"
+          id="character-portrait"
+          class="card-img-top"
+        />
+        <div class="card-body">
+          <div class="card-title">{{ c.name }}</div>
+          <div class="card-subtitle">{{ c.gender }} {{ c.species }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav aria-label="pagination">
+    <ul class="pagination" *ngIf="pages">
+      <li
+        class="page-item"
+        *ngFor="let p of pages"
+        [ngClass]="{ active: p === currentPage }"
+      >
+        <button class="page-link" (click)="getCharacters(p)">{{ p }}</button>
+      </li>
+    </ul>
+  </nav>
+</div>
