@@ -11,4 +11,3 @@ export interface Character {
   origin: Location;
   location: Location;
 }
-
