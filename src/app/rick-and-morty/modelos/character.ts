@@ -8,5 +8,7 @@ export interface Character {
   gender: string;
   image: string;
   url: string;
+  origin: Location;
   location: Location;
 }
+

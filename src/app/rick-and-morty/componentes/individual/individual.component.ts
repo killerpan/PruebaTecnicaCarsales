@@ -24,6 +24,7 @@ export class IndividualComponent implements OnInit {
   getCharacter(id: string): void {
     this.charactersService.getCharacter(id).subscribe((character) => {
       this.character = character;
+      console.log(character);
     });
   }
 }
