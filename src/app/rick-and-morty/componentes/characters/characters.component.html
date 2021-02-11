@@ -1,23 +1,21 @@
 <div class="container characters">
-  <div class="name-search row">
-    <div class="col-md-11">
-      <input
-        name="name-search"
-        id="name-search"
-        placeholder="Buscar por nombre"
-        type="text"
-        class="form-control"
-        autocomplete="off"
-        [(ngModel)]="searchTerm"
-      />
-    </div>
-    <div class="col-md-1">
+  <div class="input-group col-sm-6 centradobuscador">
+    <input
+      name="name-search"
+      id="name-search"
+      placeholder="Buscar por nombre"
+      type="text"
+      class="form-control"
+      autocomplete="off"
+      [(ngModel)]="searchTerm"
+    />
+    <div class="input-group-append">
       <button type="button" class="btn btn-primary" (click)="getCharacters(1)">
-        Buscar
+        <fa-icon icon="search"></fa-icon>
+          Buscar
       </button>
     </div>
   </div>
-
   <div class="row">
     <div class="card-columns">
       <div

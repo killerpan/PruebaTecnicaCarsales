@@ -7,7 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { IndividualComponent } from './componentes/individual/individual.component';
 import { IndividualEpisodeComponent } from './componentes/individual-episode/individual-episode.component';
 import { LocationsComponent } from './componentes/locations/locations.component';
-
+import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 @NgModule({
   declarations: [
     EpisodeComponent,
@@ -16,7 +17,11 @@ import { LocationsComponent } from './componentes/locations/locations.component'
     IndividualEpisodeComponent,
     LocationsComponent,
   ],
-  imports: [CommonModule, AppRoutingModule, FormsModule],
+  imports: [CommonModule, AppRoutingModule, FormsModule,FontAwesomeModule],
   exports: [EpisodeComponent, CharactersComponent],
 })
-export class RickAndMortyModule {}
+export class RickAndMortyModule {
+  constructor(private library: FaIconLibrary) {
+    library.addIcons(faSearch);
+  }
+}

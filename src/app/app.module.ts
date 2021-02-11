@@ -15,7 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     FormsModule,
     RickAndMortyModule,
-    NgbModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent],

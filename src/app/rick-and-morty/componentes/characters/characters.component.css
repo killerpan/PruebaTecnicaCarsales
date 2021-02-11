@@ -7,3 +7,9 @@ div.listchar div.card {
   margin: 0px auto;
   width: 300px;
 }
+
+.centradobuscador {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}

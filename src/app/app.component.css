@@ -5,14 +5,33 @@ div.home-app.container-fluid h1 {
   text-align: center;
 }
 div.home-app.container-fluid ul.nav.nav-pills {
-  margin: 0 auto;
-  width: 500px;
+  width: 100%;
+}
+.nav-item{
+  size:20px;
+  float: left;
+  padding: 10px;
+}
+.megali{
+  width: 70%;
 }
 .centerLogo {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-.nav-link{
+.btn{
   margin: 15px;
+}
+.centradobuscador{
+  margin-left: auto;
+  margin-right: auto;
+}
+a{
+  padding: 10px;
+  color: white;
+}
+
+table{
+  background-color: white;
 }
